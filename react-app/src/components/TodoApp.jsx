@@ -26,24 +26,24 @@ class TodoApp extends React.Component{
         this.getTodoItems();
     }
     getTodoItems() {
-        axios
-            // .get("/broken-end-point")
-            .get("/api/v1/todo_items")
-            .then(response => {
-                this.clearErrors();
-                this.setState({ isLoading: true });
-                const todoItems = response.data;
-                this.setState({ todoItems });
-                this.setState({ isLoading: false });
-            })
-            .catch(error => {
-                this.setState({ isLoading: true });
-                this.setState({
-                    errorMessage: {
-                        message: "There was an error loading your todo items..."
-                    }
-                });
-            });
+        // axios
+        //     // .get("/broken-end-point")
+        //     .get("/api/v1/todo_items")
+        //     .then(response => {
+        //         this.clearErrors();
+        //         this.setState({ isLoading: true });
+        //         const todoItems = response.data;
+        //         this.setState({ todoItems });
+        //         this.setState({ isLoading: false });
+        //     })
+        //     .catch(error => {
+        //         this.setState({ isLoading: true });
+        //         this.setState({
+        //             errorMessage: {
+        //                 message: "There was an error loading your todo items..."
+        //             }
+        //         });
+        //     });
     }
     createTodoItem(todoItem) {
         const todoItems = [todoItem, ...this.state.todoItems];

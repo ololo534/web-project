@@ -13,22 +13,22 @@ class TodoForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        setAxiosHeaders();
-        axios
-            .post('/api/v1/todo_items', {
-                todo_item: {
-                    title: this.titleRef.current.value,
-                    complete: false,
-                },
-            })
-            .then(response => {
-                const todoItem = response.data
-                this.props.createTodoItem(todoItem)
-                this.props.clearErrors();
-            })
-            .catch(error => {
-                this.props.handleErrors(error);
-            })
+        // setAxiosHeaders();
+        // axios
+        //     .post('/api/v1/todo_items', {
+        //         todo_item: {
+        //             title: this.titleRef.current.value,
+        //             complete: false,
+        //         },
+        //     })
+        //     .then(response => {
+        //         const todoItem = response.data
+        //         this.props.createTodoItem(todoItem)
+        //         this.props.clearErrors();
+        //     })
+        //     .catch(error => {
+        //         this.props.handleErrors(error);
+        //     })
         e.target.reset()
     }
 
