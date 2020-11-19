@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Header from "./components/Header";
 import TodoApp from "./components/TodoApp";
-import StickyFooter from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <div className="container">
           <TodoApp />
         </div>
-        <StickyFooter />
+        <Footer />
       </>
   );
 }

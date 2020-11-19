@@ -65,6 +65,7 @@ class TodoApp extends React.Component{
     render() {
         return (
             <>
+                {this.state.isLoading && <Spinner />}
                 {this.state.errorMessage && (
                     <ErrorMessage errorMessage={this.state.errorMessage} />
                 )}
@@ -92,7 +93,6 @@ class TodoApp extends React.Component{
                         </TodoItems>
                     </>
                 )}
-                {this.state.isLoading && <Spinner />}
             </>
         );
     }

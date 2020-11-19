@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import axios from "axios";
 import _ from "lodash";
 
-import setAxiosHeaders from "./AxiosHeaders";
+import setAxiosHeader from "./AxiosHeaders";
 
 class TodoItem extends React.Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class TodoItem extends React.Component {
         this.updateTodoItem();
     }
     updateTodoItem = _.debounce(() => {
-        setAxiosHeaders();
+        setAxiosHeader();
         axios
             .put(this.path, {
                 todo_item: {
@@ -41,7 +41,7 @@ class TodoItem extends React.Component {
             });
     }, 1000);
     handleDestroy() {
-        setAxiosHeaders();
+        setAxiosHeader();
         const confirmation = window.confirm("Are you sure?");
         if (confirmation) {
             axios
@@ -58,7 +58,7 @@ class TodoItem extends React.Component {
         const { todoItem } = this.props
         return (
             <tr
-                className={`${ this.state.complete && this.props.hideCompletedTodoItems ? `d-none` : "" } ${this.state.complete ? "table-light" : ""}`}
+                className={`${ this.state.complete && this.props.hideCompletedTodoItems ? `d-none` : "" } ${this.state.complete ? "table" : "table"}`}
             >
                 <td>
                     <svg

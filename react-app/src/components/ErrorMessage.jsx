@@ -7,33 +7,24 @@ const ErrorMessage = props => {
     const data = _.get(props.errorMessage, "response.data", null);
     const message = _.get(props.errorMessage, "message", null);
     if (data) {
-        const keys = Object.keys(data);
-        return keys.map(key => {
+        const values = Object.keys(data);
+        return values.map(value => {
             return (
                 <div
                     key={new Date()}
                     className="alert alert-danger"
                     role="alert"
                 >
-                    <p>{key}</p>
-                    <ul>
-                        <li>{data[key].map(message => message)}</li>
-                    </ul>
+                    {value}
                 </div>
             );
         });
-    } else if (message) {
-        return (
-            <div className="alert alert-danger" role="alert">
-                <p className="mb-0">{message}</p>
-            </div>
-        );
     } else {
         return (
             <div className="alert alert-danger" role="alert">
-                <p className="mb-0">There was an error.</p>
+                <p className="mb-0">{message ? message : 'There was an error.'}</p>
             </div>
-        )
+        );
     }
 };
 

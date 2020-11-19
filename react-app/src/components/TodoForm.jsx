@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import axios from 'axios'
-import setAxiosHeaders from "./AxiosHeaders";
+import setAxiosHeader from "./AxiosHeaders";
 
 class TodoForm extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class TodoForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        // setAxiosHeaders();
+        // setAxiosHeader();
         // axios
         //     .post('/api/v1/todo_items', {
         //         todo_item: {
