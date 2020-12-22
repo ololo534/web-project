@@ -1,12 +1,10 @@
 import React from 'react'
 
-import axios from "axios";
-
 import TodoItems from "./TodoItems";
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
-import Spinner from "./Spinner";
-import ErrorMessage from "./ErrorMessage";
+import Spinner from "../../components/Spinner";
+import ErrorMessage from "../../components/ErrorMessage";
 
 class TodoApp extends React.Component{
     constructor(props) {

@@ -1,6 +1,4 @@
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
@@ -74,10 +72,6 @@ export default function RegisterForm(){
                 id="password"
                 autoComplete="current-password"
             />
-            <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-            />
             <Button
                 type="submit"
                 fullWidth
@@ -88,13 +82,8 @@ export default function RegisterForm(){
                 Join Us!
             </Button>
             <Grid container>
-                <Grid item xs>
-                    <Link href="#" variant="body2">
-                        Forgot password?
-                    </Link>
-                </Grid>
                 <Grid item>
-                    <Link href="#" variant="body2">
+                    <Link href={"/sign_in"} variant="body2">
                         Already have an account? Sign In
                     </Link>
                 </Grid>

@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import ListAltIcon from "@material-ui/icons/ListAlt";
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import blue from "@material-ui/core/colors/blue";
 
 
