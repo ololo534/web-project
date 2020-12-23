@@ -8,15 +8,12 @@ import java.util.List;
 
 
 @Data
-@NoArgsConstructor
+
 public class TodoListCreatedResponse {
     private String id;
     private String name;
     private List<TodoItem> items = new ArrayList<>();
     
-    public TodoListCreatedResponse() {
-    	
-    }
     
     public TodoListCreatedResponse(String id, String name) {
         this.setId(id);
