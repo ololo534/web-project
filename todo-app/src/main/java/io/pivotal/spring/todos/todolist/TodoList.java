@@ -22,7 +22,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor
 @Table(name="todo_list")
 public class TodoList {
 

@@ -11,6 +11,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
+@NoArgsConstructor
 @ToString(exclude = {"list"})
 @Table(name="todo_item")
 public class TodoItem {
@@ -36,6 +37,9 @@ public class TodoItem {
         this.list = list;
         this.owner = owner;
     }
+
+//	public TodoItem() {
+//	}
 
 	public static TodoItem from(TodoItemRequest todoItemRequest, TodoList todoList) {
         return new TodoItem(todoItemRequest.getName(), todoList, todoList.getOwner());
