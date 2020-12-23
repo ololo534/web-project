@@ -37,10 +37,6 @@ public class TodoItem {
         this.owner = owner;
     }
 
-    public TodoItem() {
-		
-	}
-
 	public static TodoItem from(TodoItemRequest todoItemRequest, TodoList todoList) {
         return new TodoItem(todoItemRequest.getName(), todoList, todoList.getOwner());
     }
