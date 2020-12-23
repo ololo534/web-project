@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import axios from "axios";
 import _ from "lodash";
 
-import setAxiosHeader from "./AxiosHeaders";
+import setHeader from "../../components/SetHeaders";
 
 class TodoItem extends React.Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class TodoItem extends React.Component {
         this.updateTodoItem();
     }
     updateTodoItem = _.debounce(() => {
-        setAxiosHeader();
+        setHeader();
         axios
             .put(this.path, {
                 todo_item: {
@@ -41,7 +41,7 @@ class TodoItem extends React.Component {
             });
     }, 1000);
     handleDestroy() {
-        setAxiosHeader();
+        setHeader();
         const confirmation = window.confirm("Are you sure?");
         if (confirmation) {
             axios

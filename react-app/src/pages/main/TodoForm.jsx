@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import axios from 'axios'
-import setAxiosHeader from "./AxiosHeaders";
-
 class TodoForm extends React.Component {
     constructor(props) {
         super(props)
@@ -13,7 +10,7 @@ class TodoForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        // setAxiosHeader();
+        // setHeader();
         // axios
         //     .post('/api/v1/todo_items', {
         //         todo_item: {
@@ -41,7 +38,6 @@ class TodoForm extends React.Component {
                             type="text"
                             name="title"
                             ref={this.titleRef}
-                            // required
                             className="form-control"
                             id="title"
                             placeholder="Write your todo item here..."
