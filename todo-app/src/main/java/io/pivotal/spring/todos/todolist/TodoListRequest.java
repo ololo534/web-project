@@ -5,14 +5,10 @@ import lombok.NoArgsConstructor;
 
 
 @Data
-@NoArgsConstructor
 public class TodoListRequest {
 
     private String name;
     
-    public TodoListRequest() {
-    	
-    }
     
     public TodoListRequest(String name) {
         this.setName(name);
