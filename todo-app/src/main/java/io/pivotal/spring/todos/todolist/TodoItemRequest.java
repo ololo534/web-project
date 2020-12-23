@@ -6,13 +6,8 @@ import lombok.NoArgsConstructor;
 
 
 @Data
-@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TodoItemRequest {
-	
-	public TodoItemRequest() {
-		
-	}
 	
     private boolean completed;
     private String name;
